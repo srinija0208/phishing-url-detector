@@ -1,12 +1,3 @@
----
-title: Phishing URL Detector
-emoji: 🎣 
-sdk: gradio 
-sdk_version: 4.44.1 
-app_file: phishing_detector_app.py 
-hardware: cpu-basic 
----
-
 # 🎣 Phishing URL Detector
 
 ## 📌 Model Description  
@@ -67,11 +58,15 @@ The **best model was selected based on recall**, since reducing false negatives 
 
 ---
 
-## Tech Stack
-- Python
-- XGBoost
-- Scikit-learn
-- Gradio
+# 🧩 Tech Stack
+
+**Language:** Python
+
+**Libraries:** XGBoost, Scikit-learn, Pandas, Joblib, Gradio
+
+**Deployment:** Hugging Face Spaces
+
+**Version Control:** Git & GitHub
 
 ---
 
@@ -107,3 +102,33 @@ For this application to build and run successfully on Hugging Face Spaces, the f
 - artifacts/best_model.pkl: The saved trained model pipeline.
 
 - src/components/feature_extraction.py: The custom Python module required for feature extraction.
+
+---
+
+# 🗂️ Project Structure
+
+phishing-url-detector/
+│
+├── src/
+│   ├── components/
+│   │   ├── feature_extraction.py      # Extracts lexical & structural URL features
+│   │   └── preprocess.py              # Preprocessing pipeline for dataset
+│   │
+│   ├── pipeline/
+│       ├── prediction_pipeline.py     # Loads model and predicts new URLs
+│       └── training_pipeline.py       # Handles model training & evaluation
+│
+├── artifacts/                         # Contains saved models, encoders, scalers
+│
+├── phishing_detector_app.py           # Gradio app for deployment
+├── requirements.txt                   # Dependencies
+├── README.md                          # Required: Hugging Face config
+├── README-GitHub.md                   # Detailed Project Docs 
+└── LICENSE                            
+
+
+---
+
+# 👉 Live Demo on Hugging Face:
+🔗 https://huggingface.co/spaces/srinija1176/phishing-url-detector
+
