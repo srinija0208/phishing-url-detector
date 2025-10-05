@@ -109,22 +109,22 @@ For this application to build and run successfully on Hugging Face Spaces, the f
 
 phishing-url-detector/
 │
+├── artifacts/                  # Saved model (best_model.pkl) and related artifacts.
+│
 ├── src/
 │   ├── components/
-│   │   ├── feature_extraction.py      # Extracts lexical & structural URL features
-│   │   └── preprocess.py              # Preprocessing pipeline for dataset
+│   │   ├── feature_extraction.py   # Extracts lexical & structural URL features
+│   │   └── preprocess.py           # Preprocessing pipeline for dataset
 │   │
-│   ├── pipeline/
-│       ├── prediction_pipeline.py     # Loads model and predicts new URLs
-│       └── training_pipeline.py       # Handles model training & evaluation
+│   └── pipeline/
+│       ├── prediction_pipeline.py  # Loads model and predicts new URLs
+│       └── training_pipeline.py    # Handles model training & evaluation
 │
-├── artifacts/                         # Contains saved models, encoders, scalers
-│
-├── phishing_detector_app.py           # Gradio app for deployment
-├── requirements.txt                   # Dependencies
-├── README.md                          # Required: Hugging Face config
-├── README-GitHub.md                   # Detailed Project Docs 
-└── LICENSE                            
+├── phishing_detector_app.py    # Main Gradio app for deployment (HF Space).
+├── requirements.txt            # Python dependencies.
+├── README.md                   # Hugging Face Space configuration (required YAML header).
+├── README-GitHub.md            # Detailed project documentation (this file).
+└── LICENSE                     # Project license (e.g., MIT).                           
 
 
 ---
