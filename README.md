@@ -107,7 +107,8 @@ For this application to build and run successfully on Hugging Face Spaces, the f
 
 # 🗂️ Project Structure
 
-```phishing-url-detector/
+phishing-url-detector/
+```
 │
 ├── artifacts/                  # Saved model (best_model.pkl) and related artifacts.
 │
